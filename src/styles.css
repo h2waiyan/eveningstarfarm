@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  padding: 0rem 0rem 10rem;
+  line-height: 1.7;
+  font-family: "Nunito Sans", sans-serif;
+  color: #555;
+  min-height: 100vh;
+  background: linear-gradient(to bottom right, #9be15d, #00e3ae);
+}
