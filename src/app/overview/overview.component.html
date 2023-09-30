@@ -2,11 +2,11 @@
   <h1>🌽 {{ name }} 🥦</h1>
 
   <div class="mycards-container">
-    <figure class="mycard">
+    <figure class="mycard" (click)="goTo(data[0]['id'])">
       <div class="mycard__emoji">🥑🥑</div>
 
       <div class="mycard__title-box">
-        <h2 class="mycard__title">Fresh Avocado</h2>
+        <h2 class="mycard__title">{{ data[0]["productName"] }}</h2>
       </div>
 
       <div class="mycard__details">
@@ -28,7 +28,7 @@
       </a>
     </figure>
 
-    <figure class="mycard">
+    <figure class="mycard" (click)="goTo(data[1]['id'])">
       <div class="mycard__emoji">🧀🧀</div>
       <div class="mycard__title-box">
         <h2 class="mycard__title">Goat and Sheep Cheese</h2>
@@ -49,7 +49,7 @@
       </a>
     </figure>
 
-    <figure class="mycard">
+    <figure class="mycard" (click)="goTo(data[2]['id'])">
       <div class="mycard__emoji">🥦🥦</div>
       <div class="mycard__title-box">
         <h2 class="mycard__title">Apollo Broccoli</h2>
@@ -74,7 +74,7 @@
       </a>
     </figure>
 
-    <figure class="mycard">
+    <figure class="mycard" (click)="goTo(data[3]['id'])">
       <div class="mycard__emoji">🥕🥕</div>
       <div class="mycard__title-box">
         <h2 class="mycard__title">Baby Carrots</h2>
@@ -99,7 +99,7 @@
       </a>
     </figure>
 
-    <figure class="mycard">
+    <figure class="mycard" (click)="goTo(data[4]['id'])">
       <div class="mycard__emoji">🌽🌽</div>
       <div class="mycard__title-box">
         <h2 class="mycard__title">Sweet Corncobs</h2>

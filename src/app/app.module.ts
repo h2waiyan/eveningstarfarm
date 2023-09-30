@@ -7,6 +7,8 @@ import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotfoundcompComponent } from './notfoundcomp/notfoundcomp.component';
+import { TeamComponent } from './team/team.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { NotfoundcompComponent } from './notfoundcomp/notfoundcomp.component';
     ProductComponent,
     FooterComponent,
     ContactComponent,
-    NotfoundcompComponent
+    NotfoundcompComponent,
+    TeamComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

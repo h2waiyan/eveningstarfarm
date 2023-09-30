@@ -8,6 +8,12 @@ import { NotfoundcompComponent } from './notfoundcomp/notfoundcomp.component';
 
 const routes: Routes = [
   {
+    path: '',
+    // component: OverviewComponent
+    redirectTo: 'overview',
+    pathMatch: 'full'
+  },
+  {
     path: 'overview',
     component: OverviewComponent,
     children: [
@@ -22,7 +28,7 @@ const routes: Routes = [
     ]
   },
   {
-    path: 'product',
+    path: 'product/:id',
     component: ProductComponent
   },
   {
@@ -31,7 +37,8 @@ const routes: Routes = [
   },
   {
     path: "**", // Wildcard
-    component: NotfoundcompComponent
+    redirectTo: 'overview'
+    // component: NotfoundcompComponent
   },
 ];
 
