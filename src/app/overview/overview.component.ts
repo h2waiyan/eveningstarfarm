@@ -17,9 +17,17 @@ export class OverviewComponent {
 
   data = this.heroService.farmData;
 
+  farmername: string = "jennie";
+
+  imageUrl = 'https://akns-images.eonline.com/eol_images/Entire_Site/202293/rs_1200x1200-221003113937-1200-Blackpinks_Jennie_Kim_2019-gj.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top';
+
   ngOnInit() {
     // this.heroService.showAlert();
     console.log(this.heroService.farmName);
+  }
+
+  showName(): void {
+    alert(this.farmername);
   }
 
   goTo(name: number) {
@@ -29,7 +37,28 @@ export class OverviewComponent {
     // router > 'product'
   }
 
+  onFocus() {
+    console.log("focus on")
+  }
+
+  onBlur() {
+    console.log("Blurrrrrrr")
+  }
   addition(fN: number, sN: number) {
     return fN + sN
+  }
+
+  isActiveNow: boolean = false;
+
+  logout() {
+    this.isActiveNow = false;
+    console.log(">>>>>>");
+    console.log(this.isActiveNow);
+  }
+
+  login() {
+    this.isActiveNow = true;
+    console.log(">>>>>>");
+    console.log(this.isActiveNow);
   }
 }

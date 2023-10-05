@@ -16,13 +16,18 @@ export class ProductComponent implements OnInit {
 
   name = this.hero.farmName;
 
-  data = this.hero.farmData;
+  data = this.hero.farmData; // [ id 101, id 102, id 103]
 
-  productId: number = 0;
-
+  productId: number = 0; // 101, 102
+  indexNo: number = 0 // 0, 1
 
   ngOnInit() {
-    this.productId = this.activatedRouted.snapshot.params['id'];
+    this.productId = this.activatedRouted.snapshot.params['id']; // 101
+
+    this.indexNo = this.data.findIndex((item) => {
+      return item.id == this.productId;
+    });
+    // find, filter, map, reduce, forEach
     console.log(this.productId);
   }
 }

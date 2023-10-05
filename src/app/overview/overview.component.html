@@ -1,4 +1,17 @@
 <div class="container">
+  <h1>{{ farmername }}</h1>
+
+  <h2>{{ isActiveNow }}</h2>
+
+  <div [class.greencircle]="isActiveNow"></div>
+
+  <!-- <img [src]="imageUrl" alt="" /> -->
+
+  <input type="text" value="farmername" (focus)="onFocus()" (blur)="onBlur()" />
+
+  <button (click)="login()">LOGIN</button>
+  <button (click)="logout()">LOG OUT</button>
+
   <h1>🌽 {{ name }} 🥦</h1>
 
   <div class="mycards-container">

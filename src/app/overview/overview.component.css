@@ -144,3 +144,10 @@ h1::before {
 .not-organic {
   display: none;
 }
+
+.greencircle {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: green;
+}

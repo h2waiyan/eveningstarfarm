@@ -8,54 +8,48 @@
     </a>
     <div class="product__hero">
       <span class="product__emoji product__emoji--1">
-        {{ data[productId]["image"] }}
+        {{ data[indexNo]["image"] }}
       </span>
       <span class="product__emoji product__emoji--2">{{
-        data[productId]["image"]
+        data[indexNo]["image"]
       }}</span>
       <span class="product__emoji product__emoji--3">{{
-        data[productId]["image"]
+        data[indexNo]["image"]
       }}</span>
       <span class="product__emoji product__emoji--4">{{
-        data[productId]["image"]
+        data[indexNo]["image"]
       }}</span>
       <span class="product__emoji product__emoji--5">{{
-        data[productId]["image"]
+        data[indexNo]["image"]
       }}</span>
       <span class="product__emoji product__emoji--6">{{
-        data[productId]["image"]
+        data[indexNo]["image"]
       }}</span>
       <span class="product__emoji product__emoji--7">{{
-        data[productId]["image"]
+        data[indexNo]["image"]
       }}</span>
       <span class="product__emoji product__emoji--8">{{
-        data[productId]["image"]
+        data[indexNo]["image"]
       }}</span>
       <span class="product__emoji product__emoji--9">{{
-        data[productId]["image"]
+        data[indexNo]["image"]
       }}</span>
     </div>
-    <h2 class="product__name">{{ data[productId]["productName"] }}</h2>
+    <h2 class="product__name">{{ data[indexNo]["productName"] }}</h2>
     <div class="product__details">
-      <p>
-        <span class="emoji-left">🌍</span> From {{ data[productId]["from"] }}
-      </p>
-      <p>
-        <span class="emoji-left">❤️</span> {{ data[productId]["nutrients"] }}
-      </p>
-      <p>
-        <span class="emoji-left">📦</span> {{ data[productId]["quantity"] }}
-      </p>
-      <p><span class="emoji-left">🏷</span> {{ data[productId]["price"] }}€</p>
+      <p><span class="emoji-left">🌍</span> From {{ data[indexNo]["from"] }}</p>
+      <p><span class="emoji-left">❤️</span> {{ data[indexNo]["nutrients"] }}</p>
+      <p><span class="emoji-left">📦</span> {{ data[indexNo]["quantity"] }}</p>
+      <p><span class="emoji-left">🏷</span> {{ data[indexNo]["price"] }}€</p>
     </div>
 
     <a href="#" class="product__link">
       <span class="emoji-left">🛒</span>
-      <span>Add to shopping card ({{ data[productId]["price"] }}€)</span>
+      <span>Add to shopping card ({{ data[indexNo]["price"] }}€)</span>
     </a>
 
     <p class="product__description">
-      {{ data[productId]["description"] }}
+      {{ data[indexNo]["description"] }}
     </p>
   </figure>
 </div>
