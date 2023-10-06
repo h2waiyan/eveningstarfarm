@@ -1,137 +1,36 @@
 <div class="container">
-  <h1>{{ farmername }}</h1>
-
-  <h2 [ngClass]="{ 'redback yellowtext' : isActiveNow }">{{ isActiveNow }}</h2>
-
-  <div [class.greencircle]="isActiveNow"></div>
-
-  <!-- <img [src]="imageUrl" alt="" /> -->
-
-  <input type="text" value="farmername" (focus)="onFocus()" (blur)="onBlur()" />
-
-  <button (click)="login()">LOGIN</button>
-  <button (click)="logout()">LOG OUT</button>
-
   <h1>🌽 {{ name }} 🥦</h1>
 
   <div class="mycards-container">
-    <figure class="mycard" (click)="goTo(data[0]['id'])">
-      <div class="mycard__emoji">🥑🥑</div>
+    <ng-container *ngFor="let farm of data">
+      <figure class="mycard" (click)="goTo(farm['id'])">
+        <div class="mycard__emoji">{{ farm["image"] }}</div>
 
-      <div class="mycard__title-box">
-        <h2 class="mycard__title">{{ data[0]["productName"] }}</h2>
-      </div>
-
-      <div class="mycard__details">
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail mycard__detail--organic">Organic!</h6>
+        <div class="mycard__title-box">
+          <h2 class="mycard__title">{{ farm["productName"] }}</h2>
         </div>
 
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail">4 🥑 per 📦</h6>
+        <div class="mycard__details">
+          <div class="mycard__detail-box">
+            <h6 class="mycard__detail mycard__detail--organic">Organic!</h6>
+          </div>
+
+          <div class="mycard__detail-box">
+            <h6 class="mycard__detail">{{ farm["quantity"] }} per 📦</h6>
+          </div>
+
+          <div class="mycard__detail-box">
+            <h6 class="mycard__detail mycard__detail--price">
+              {{ farm["price"] }}€
+            </h6>
+          </div>
         </div>
 
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail mycard__detail--price">6.50€</h6>
-        </div>
-      </div>
-
-      <a class="mycard__link" href="/product">
-        <span>Detail <i class="emoji-right">👉</i></span>
-      </a>
-    </figure>
-
-    <figure class="mycard" (click)="goTo(data[1]['id'])">
-      <div class="mycard__emoji">🧀🧀</div>
-      <div class="mycard__title-box">
-        <h2 class="mycard__title">Goat and Sheep Cheese</h2>
-      </div>
-
-      <div class="mycard__details">
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail">250g per 📦</h6>
-        </div>
-
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail mycard__detail--price">5.00€</h6>
-        </div>
-      </div>
-
-      <a class="mycard__link" routerLink="/product">
-        <span>Detail <i class="emoji-right">👉</i></span>
-      </a>
-    </figure>
-
-    <figure class="mycard" (click)="goTo(data[2]['id'])">
-      <div class="mycard__emoji">🥦🥦</div>
-      <div class="mycard__title-box">
-        <h2 class="mycard__title">Apollo Broccoli</h2>
-      </div>
-
-      <div class="mycard__details">
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail mycard__detail--organic">Organic!</h6>
-        </div>
-
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail">3 🥦 per 📦</h6>
-        </div>
-
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail mycard__detail--price">5.50€</h6>
-        </div>
-      </div>
-
-      <a class="mycard__link" href="#">
-        <span>Detail <i class="emoji-right">👉</i></span>
-      </a>
-    </figure>
-
-    <figure class="mycard" (click)="goTo(data[3]['id'])">
-      <div class="mycard__emoji">🥕🥕</div>
-      <div class="mycard__title-box">
-        <h2 class="mycard__title">Baby Carrots</h2>
-      </div>
-
-      <div class="mycard__details">
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail mycard__detail--organic">Organic!</h6>
-        </div>
-
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail">20 🥕 per 📦</h6>
-        </div>
-
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail mycard__detail--price">3.00€</h6>
-        </div>
-      </div>
-
-      <a class="mycard__link" href="#">
-        <span>Detail <i class="emoji-right">👉</i></span>
-      </a>
-    </figure>
-
-    <figure class="mycard" (click)="goTo(data[4]['id'])">
-      <div class="mycard__emoji">🌽🌽</div>
-      <div class="mycard__title-box">
-        <h2 class="mycard__title">Sweet Corncobs</h2>
-      </div>
-
-      <div class="mycard__details">
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail">2 🌽 per 📦</h6>
-        </div>
-
-        <div class="mycard__detail-box">
-          <h6 class="mycard__detail mycard__detail--price">2.00€</h6>
-        </div>
-      </div>
-
-      <a class="mycard__link" href="#">
-        <span>Detail <i class="emoji-right">👉</i></span>
-      </a>
-    </figure>
+        <a class="mycard__link" href="/product">
+          <span>Detail <i class="emoji-right">👉</i></span>
+        </a>
+      </figure>
+    </ng-container>
   </div>
 </div>
 

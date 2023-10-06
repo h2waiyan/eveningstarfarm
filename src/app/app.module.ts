@@ -9,6 +9,7 @@ import { ContactComponent } from './contact/contact.component';
 import { NotfoundcompComponent } from './notfoundcomp/notfoundcomp.component';
 import { TeamComponent } from './team/team.component';
 import { EmployeeComponent } from './employee/employee.component';
+import { PhoneComponent } from './phone/phone.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { EmployeeComponent } from './employee/employee.component';
     ContactComponent,
     NotfoundcompComponent,
     TeamComponent,
-    EmployeeComponent
+    EmployeeComponent,
+    PhoneComponent
   ],
   imports: [
     BrowserModule,

@@ -5,6 +5,7 @@ import { ProductComponent } from './product/product.component';
 import { FooterComponent } from './footer/footer.component';
 import { ContactComponent } from './contact/contact.component';
 import { NotfoundcompComponent } from './notfoundcomp/notfoundcomp.component';
+import { PhoneComponent } from './phone/phone.component';
 
 const routes: Routes = [
   {
@@ -34,6 +35,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'phone',
+    component: PhoneComponent
   },
   {
     path: "**", // Wildcard

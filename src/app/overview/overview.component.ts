@@ -14,16 +14,19 @@ export class OverviewComponent {
   ) { }
 
   name = this.heroService.farmName;
-
   data = this.heroService.farmData;
-
   farmername: string = "jennie";
-
+  isActiveNow: boolean = false;
   imageUrl = 'https://akns-images.eonline.com/eol_images/Entire_Site/202293/rs_1200x1200-221003113937-1200-Blackpinks_Jennie_Kim_2019-gj.jpg?fit=around%7C1200:1200&output-quality=90&crop=1200:1200;center,top';
+  fruits = ['organe', 'apple', 'banana'];
 
   ngOnInit() {
     // this.heroService.showAlert();
     console.log(this.heroService.farmName);
+
+    for (let x of this.fruits) {
+      console.log(x)
+    }
   }
 
   showName(): void {
@@ -48,13 +51,11 @@ export class OverviewComponent {
     return fN + sN
   }
 
-  isActiveNow: boolean = false;
-
   logout() {
     this.isActiveNow = false;
     console.log(">>>>>>");
     console.log(this.isActiveNow);
-    document.getElementsByTagName("body")[0].classList.remove('dark');  
+    document.getElementsByTagName("body")[0].classList.remove('dark');
 
   }
 
@@ -63,6 +64,6 @@ export class OverviewComponent {
     console.log(">>>>>>");
     console.log(this.isActiveNow);
 
-    document.getElementsByTagName("body")[0].classList.add('dark');  
+    document.getElementsByTagName("body")[0].classList.add('dark');
   }
 }

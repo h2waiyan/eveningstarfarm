@@ -1,0 +1,9 @@
+<p>phone works!</p>
+
+<ng-container *ngFor="let product of products" >
+  <div *ngIf="product.id" class='card'>
+    <span>{{ product.name }}</span>
+    <p>{{ product.price }}</p>
+  </div>
+ 
+</ng-container>
