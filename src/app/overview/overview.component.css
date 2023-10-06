@@ -151,3 +151,11 @@ h1::before {
   border-radius: 50%;
   background-color: green;
 }
+
+.redback {
+  background-color: red;
+}
+
+.yellowtext {
+  color: yellow;
+}

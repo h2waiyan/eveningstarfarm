@@ -1,7 +1,7 @@
 <div class="container">
   <h1>{{ farmername }}</h1>
 
-  <h2>{{ isActiveNow }}</h2>
+  <h2 [ngClass]="{ 'redback yellowtext' : isActiveNow }">{{ isActiveNow }}</h2>
 
   <div [class.greencircle]="isActiveNow"></div>
 

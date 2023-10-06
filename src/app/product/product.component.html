@@ -2,7 +2,7 @@
   <h1>🌽 {{ name }} 🥦</h1>
 
   <figure class="product">
-    <div class="product__organic"><h5>Organic</h5></div>
+    <div class="product__organic" [class.not-organic]="!data[indexNo]['organic']"><h5>Organic</h5></div>
     <a href="#" class="product__back">
       <span class="emoji-left">👈</span>Back
     </a>

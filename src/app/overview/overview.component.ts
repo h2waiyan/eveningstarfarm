@@ -54,11 +54,15 @@ export class OverviewComponent {
     this.isActiveNow = false;
     console.log(">>>>>>");
     console.log(this.isActiveNow);
+    document.getElementsByTagName("body")[0].classList.remove('dark');  
+
   }
 
   login() {
     this.isActiveNow = true;
     console.log(">>>>>>");
     console.log(this.isActiveNow);
+
+    document.getElementsByTagName("body")[0].classList.add('dark');  
   }
 }
